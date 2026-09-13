@@ -1,52 +1,25 @@
-# ==============================================================================
-# MY SUMMER CAR SMART MOD INSTALLER - GITIGNORE
-# ==============================================================================
+﻿# Código-fonte Python original (protegido na distribuição)
+AutoInstallModMySummerCar.py
+*.py
 
-# Python Bytecode & Cache
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.pytest_cache/
+# Arquivos de mods baixados (não versionar arquivos de mods pessoais)
+mods/*
+!mods/.gitkeep
 
-# Ambientes Virtuais
-venv/
-env/
-.venv/
-ENV/
-
-# Arquivos de Log e Execução Local
+# Arquivos de log e memória local
 *.log
-ModInstaller.log
-audit_test.log
-test_installer.log
-
-# Banco de Memória Local e Backups
-MySummerCarModInstaller/
-installed_mods.json
-*.bak
 *.tmp
-_Backups/
+*.bak
+config.json
+installed_mods.json
 
-# Arquivos Compactados (Não versionar mods baixados)
-*.zip
-*.rar
-*.7z
-*.tar
-*.tar.gz
+# Caches e temporários de compilação
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
 
-# IDEs e Editores
-.vscode/
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.swp
-
-# Arquivos do Sistema Operacional
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
+# Arquivos de sistema
 .DS_Store
+Thumbs.db

@@ -1,10 +1,6 @@
-# ==============================================================================
-# MY SUMMER CAR SMART AUTO MOD INSTALLER - DEPENDÊNCIAS
-# ==============================================================================
-# O instalador funciona 100% nativamente apenas com a biblioteca padrão do Python!
-#
-# A biblioteca 'rarfile' abaixo é OPCIONAL para descompactação de arquivos .RAR
-# em memória. Caso não esteja instalada, o instalador utilizará automaticamente
-# o UnRAR.exe (WinRAR) ou 7z.exe (7-Zip) nativos instalados no Windows.
-#
-rarfile>=4.0
+# AutoInstallModMySummerCar
+# O instalador utiliza 100% da biblioteca padrao do Python (nenhuma instalacao adicional necessaria).
+# Arquivos .zip e .rar sao lidos nativamente no Windows.
+
+# Opcional (apenas para leitura de arquivos .rar sem o descompactador do Windows/WinRAR):
+# rarfile>=4.0
