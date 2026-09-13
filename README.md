@@ -1,105 +1,127 @@
-﻿# AutoInstallModMySummerCar
+﻿<div align="center">
 
-O **AutoInstallModMySummerCar** é um instalador inteligente e automático de mods para o jogo **My Summer Car** (compatível com MSCLoader e MSCLoader Pro).
+# 🚗 AutoInstallModMySummerCar
 
-Você só precisa colocar seus arquivos `.zip` ou `.rar` dentro da pasta `mods` e dar dois cliques no `run.bat` (ou no `AutoInstallModMySummerCar.exe`). O programa cuida de todo o resto sozinho: analisa os arquivos, descobre onde cada um deve ficar, organiza as pastas e instala tudo no lugar certo.
+**O instalador automático, inteligente e definitivo de mods para My Summer Car.**  
+*Compatível com MSCLoader e MSCLoader Pro.*
 
-Sem menus complicados, sem perguntas chatas a cada mod e sem necessidade de instalar o Python no computador.
+[![GitHub Release](https://img.shields.io/badge/Release-v2.0-blue?style=for-the-badge&logo=github)](https://github.com/Souzado0800/AutoInstallModMySummerCar)
+[![Platform](https://img.shields.io/badge/Plataforma-Windows%2010%20%2F%2011%20(64--bit)-0078D6?style=for-the-badge&logo=windows)](https://microsoft.com)
+[![Status](https://img.shields.io/badge/Instalação-100%25%20Automática-success?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/Licença-MIT-yellow?style=for-the-badge)](LICENSE)
 
----
+<br>
 
-## Como usar
+> **Chega de extrair arquivos manualmente e adivinhar onde colocar cada pasta.**  
+> Coloque seus arquivos `.zip` e `.rar` na pasta `mods`, dê dois cliques no `run.bat` e pronto!
 
-1. Coloque seus arquivos `.zip` ou `.rar` dentro da pasta `mods`.
-2. Dê um duplo clique no arquivo `run.bat` (ou execute `AutoInstallModMySummerCar.exe`).
-3. Na primeira vez, confirme onde está sua pasta `Mods` do jogo.
-4. Pronto! Seus mods foram instalados.
-
-Nas próximas vezes que quiser instalar novos mods, basta colocar os arquivos em `mods` e abrir o `run.bat` novamente. O programa instala os novos e não perde tempo reinstalando o que já foi instalado.
-
----
-
-## Primeira execução
-
-Na primeira vez que você abrir o programa:
-
-1. **Apoio ao projeto**: Você verá uma mensagem rápida do desenvolvedor. Você pode pressionar `[G]` para abrir o repositório no GitHub e deixar uma estrela (Star ⭐) se o projeto te ajudar, ou apenas pressionar `[ENTER]` para continuar. Deixar a estrela é totalmente opcional e não bloqueia nada!
-2. **Localização da pasta Mods**: O programa procura automaticamente sua pasta `Mods` nas 3 localizações padrão do MSCLoader:
-   - Pasta do jogo na Steam (`steamapps\common\My Summer Car\Mods`)
-   - Meus Documentos (`Documents\My Summer Car\Mods`)
-   - AppData LocalLow (`AppData\LocalLow\Amistech\My Summer Car\Mods`)
-3. Se ele encontrar sua pasta, basta apertar `[ENTER]` para confirmar. Se você usa uma pasta diferente, basta colar o caminho dela.
-4. Esse caminho fica salvo no seu computador. Nas próximas execuções, o programa não pergunta mais nada e vai direto ao ponto.
-
-> **Precisa trocar a pasta de Mods depois?**  
-> Basta executar via prompt de comando: `AutoInstallModMySummerCar.exe --reconfigure`
+</div>
 
 ---
 
-## O que o programa faz por baixo dos panos
+## ⚡ Como Usar (Super Rápido)
 
-Você não precisa entender de programação para usar, mas é legal saber como ele funciona:
+Instalar mods no My Summer Car nunca foi tão simples:
 
-```text
-Lê os mods na pasta "mods"
-   ↓
-Analisa o conteúdo de cada ZIP/RAR
-   ↓
-Identifica o tipo de cada arquivo
-   ↓
-Consulta a memória local
-   ↓
-Compara com o que já está instalado no jogo
-   ↓
-Instala somente o que for novo ou alterado
-   ↓
-Faz backup e confirma que está tudo certo
+```
+ 1. COLOQUE OS MODS             2. EXECUTE                     3. PRONTO!
+┌───────────────────────┐      ┌───────────────────────┐      ┌───────────────────────┐
+│ Coloque seus .zip     │  ──► │ Dê 2 cliques no       │  ──► │ Mods instalados e     │
+│ e .rar dentro da      │      │ arquivo:              │      │ organizados no jogo!  │
+│ pasta "mods"          │      │   run.bat             │      │ Pode abrir o jogo.    │
+└───────────────────────┘      └───────────────────────┘      └───────────────────────┘
 ```
 
-### Detecção inteligente
-O programa abre cada arquivo compactado e entende o que ele é:
-- **Mod principal** (`.dll`)
-- **Pacotes de textura** (incluindo versões 4K e HD)
-- **Addons e expansões** de mods existentes
-- **Patches e correções**
-- **Traduções** e arquivos de configuração
-- **Pastas de Assets** (ele sabe exatamente para onde cada pasta de som ou textura deve ir)
-
-Se você baixar, por exemplo, o mod principal e um pacote de texturas 4K separado, ele reconhece que os dois pertencem ao mesmo mod e instala na ordem certa.
-
-### Sistema de memória
-O programa guarda uma memória dos arquivos já processados:
-- **Não reinstala à toa**: se o mod já está instalado e os arquivos continuam intactos no jogo, ele pula em milissegundos.
-- **Atualizações automáticas**: se você baixar uma versão mais nova de um mod, ele percebe a alteração, cria um backup da versão anterior na pasta `_Backups` e atualiza com segurança.
-- **Reparo automático**: se algum arquivo do mod foi apagado ou alterado acidentalmente na sua pasta do jogo, ele detecta e restaura automaticamente.
+> 💡 **Nas próximas vezes**: Basta colocar os novos mods na pasta `mods` e abrir o `run.bat` novamente. Ele só instala o que for novo e não perde tempo reinstalando o que já está pronto!
 
 ---
 
-## Estrutura do projeto
+## ✨ Principais Vantagens
+
+| Recurso | Como te ajuda |
+| :--- | :--- |
+| 🚀 **Zero Instalações** | O programa já vem compilado em executável (`.exe`). **Não precisa instalar Python** nem configurar nada no Windows. |
+| 🧠 **Organização Inteligente** | Reconhece DLLs, pacotes de textura (incluindo 4K/HD), addons, patches, sons e pastas `Assets/`, colocando cada arquivo no seu devido lugar. |
+| ⚡ **Memória Rápida (Fast-Path)** | Lembra de cada mod instalado através de hashes criptográficos. Se o mod já estiver no jogo, ele pula a verificação em frações de segundo. |
+| 🔄 **Atualizações Seguras** | Se você baixar uma versão mais recente de um mod, ele atualiza automaticamente e cria um backup da versão anterior na pasta `_Backups`. |
+| 🔧 **Reparo Automático** | Se algum arquivo do mod foi apagado por engano da sua pasta do jogo, o instalador detecta a ausência e restaura o arquivo original. |
+| 🛡️ **Segurança Integrada** | Bloqueia scripts suspeitos (`.exe`, `.bat`, `.ps1`) dentro dos arquivos de mods e isola conflitos entre mods de autores diferentes. |
+
+---
+
+## 🔍 Como o Programa Funciona por Baixo dos Panos
+
+```text
+       Lê os arquivos na pasta "mods" (.zip e .rar)
+                           ↓
+        Analisa a estrutura interna de cada arquivo
+                           ↓
+    Identifica o papel (Mod Principal, Textura, Addon...)
+                           ↓
+             Consulta a memória persistente
+                           ↓
+        Compara com os arquivos instalados no jogo
+         ├── Já instalado e intacto?  ──► Pula instantaneamente
+         ├── Arquivo corrompido?     ──► Repara e restaura
+         ├── Versão nova detectada?  ──► Cria backup e atualiza
+         └── Mod inédito?            ──► Instala no lugar correto
+                           ↓
+      Grava o relatório de execução no log do sistema
+```
+
+---
+
+## 🎮 Primeira Execução & Configuração
+
+Na primeira vez que você abrir o `run.bat`:
+
+1. **Apoio ao Projeto**: Será exibida uma mensagem do desenvolvedor. Você pode apertar `[G]` para abrir a página do GitHub e deixar uma estrela (Star ⭐) se o projeto te ajudar, ou apertar `[ENTER]` para continuar direto (a estrela é opcional!).
+2. **Detecção da Pasta Mods**: O instalador verifica automaticamente as 3 localizações oficiais do MSCLoader:
+   - 🎮 **Pasta do Jogo (Steam)**: `steamapps\common\My Summer Car\Mods`
+   - 📂 **Meus Documentos**: `Documents\My Summer Car\Mods`
+   - ⚙️ **AppData LocalLow**: `AppData\LocalLow\Amistech\My Summer Car\Mods`
+3. Ele mostra a pasta encontrada na tela. Basta pressionar `[ENTER]` para confirmar.
+4. **Pronto!** O caminho é salvo. Nas próximas vezes, o programa não pergunta nada e executa 100% no automático.
+
+> 🔁 **Quer trocar a pasta de Mods no futuro?**  
+> Abra o terminal na pasta do programa e execute:  
+> `AutoInstallModMySummerCar.exe --reconfigure`
+
+---
+
+## 📁 Estrutura do Projeto
+
+A distribuição é limpa, organizada e sem arquivos desnecessários:
 
 ```text
 AutoInstallModMySummerCar/
-├── AutoInstallModMySummerCar.exe  # O programa principal compilado (Windows x64)
-├── README.md                      # Este guia explicativo
-├── requirements.txt               # Informações de dependências
-├── run.bat                        # Atalho de 1 clique para iniciar no Windows
-└── mods/                          # Pasta onde você coloca seus arquivos .zip e .rar
+│
+├── AutoInstallModMySummerCar.exe   # Aplicativo principal compilado (Windows 64-bit)
+├── README.md                       # Este guia de uso rápido
+├── requirements.txt                # Informações de distribuição do projeto
+├── run.bat                         # Atalho de 1 clique para executar facilmente
+└── mods/                           # Pasta onde você coloca seus arquivos .zip e .rar
 ```
 
 ---
 
-## Requisitos
+## 📋 Requisitos do Sistema
 
-- **Windows 10 ou 11 (64-bit)**
-- **MSCLoader** ou **MSCLoader Pro** instalado no My Summer Car
-- **Zero configuração**: o programa já vem pré-compilado e pronto para uso, dispensando a instalação de Python ou dependências manuais pelo usuário final.
+- **Sistema Operacional**: Windows 10 ou Windows 11 (64-bit)
+- **Mod Loader**: [MSCLoader](https://www.nexusmods.com/mysummercar/mods/147) ou [MSCLoader Pro](https://www.nexusmods.com/mysummercar/mods/532) instalado no jogo
+- **Arquivos Suportados**: Arquivos compactados nos formatos `.zip` e `.rar`
 
 ---
 
-## Apoie o Desenvolvedor
+## ⭐ Apoie o Projeto
 
-Este é um projeto gratuito e de código aberto desenvolvido por **Souza ([Souzado0800](https://github.com/Souzado0800))**.
+Este é um projeto gratuito e de código aberto desenvolvido por **Souzado0800**.  
+Se este instalador facilitou sua jogatina e economizou seu tempo, deixe uma estrela no repositório!
 
-Se este instalador economizou seu tempo e te ajudou a jogar My Summer Car com seus mods favoritos, deixe uma estrela no repositório!
+👉 **Repositório Oficial**: [https://github.com/Souzado0800/AutoInstallModMySummerCar](https://github.com/Souzado0800/AutoInstallModMySummerCar)
 
-⭐ **GitHub**: https://github.com/Souzado0800/AutoInstallModMySummerCar
+---
+
+## 📄 Licença
+
+Distribuído sob a licença [MIT](LICENSE). Desenvolvido por **Souzado0800**.
